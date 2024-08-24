@@ -16,6 +16,11 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       
       # 以降追加分
       t.string :last_name, null: false
+      t.string :first_name, null: false
+      t.string :last_name_kana, null: false
+      t.string :first_name_kana, null: false
+      t.string :email, null: false
+      t.string :encrypted_password. null:false
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
