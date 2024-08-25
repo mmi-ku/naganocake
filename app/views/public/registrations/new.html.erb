@@ -1,11 +1,40 @@
 <h2>Sign up</h2>
 
 <%= form_with model: @customer, url: customer_registration_path do |f| %>
-  <%= render "publics/shared/error_messages", resource: resource %>
+  <%= render "public/shared/error_messages", resource: resource %>
+  
+  <div class="field">
+    <%= f.label :last_name, '(姓)' %>
+    <%= f.text_field :last_name, placeholder: "令和" %>
+    <%= f.label :first_name, '(名)' %>
+    <%= f.text_field :first_name, placeholder: "喜子" %>
+  </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.label :kana_last_name, 'フリガナ (セイ)' %>
+      <%= f.text_field :kana_last_name, placeholder: "レイワ" %>
+      <%= f.label :kana_first_name, 'フリガナ (メイ)' %>
+      <%= f.text_field :kana_first_name, placeholder: "ミチコ" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, 'メールアドレス' %>
+    <%= f.email_field :email, placeholder: "sample@example.com" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postal_code, '郵便番号(ハイフンなし)' %>
+    <%= f.text_field :postal_code, placeholder: "0000000" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address, '住所' %>
+    <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephone_number, '電話番号(ハイフンなし)' %>
+    <%= f.text_field :telephone_number, placeholder: "0000000000" %>
   </div>
 
   <div class="field">
