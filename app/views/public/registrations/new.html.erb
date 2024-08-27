@@ -11,10 +11,10 @@
   </div>
 
   <div class="field">
-      <%= f.label :kana_last_name, 'フリガナ (セイ)' %>
-      <%= f.text_field :kana_last_name, placeholder: "レイワ" %>
-      <%= f.label :kana_first_name, 'フリガナ (メイ)' %>
-      <%= f.text_field :kana_first_name, placeholder: "ミチコ" %>
+      <%= f.label :last_name_kana, 'フリガナ (セイ)' %>
+      <%= f.text_field :last_name_kana, placeholder: "レイワ" %>
+      <%= f.label :first_name_kana, 'フリガナ (メイ)' %>
+      <%= f.text_field :first_name_kana, placeholder: "ミチコ" %>
   </div>
 
   <div class="field">
@@ -49,6 +49,12 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  
+  <div class="field">
+    <%= f.check_box :is_active %>
+    <%= f.label :is_active, "Is Active" %>
+  </div>
+  
 
   <div class="actions">
     <%= f.submit "Sign up" %>
